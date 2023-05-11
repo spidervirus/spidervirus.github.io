@@ -1,0 +1,154 @@
+body {
+    background-color: #000000;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  a {
+    color: #fff;
+  }
+  
+  a:hover {
+    color: #DC143C;
+  }
+  
+  .navbar {
+    background-color: #DC143C !important;
+  }
+  
+  .jumbotron {
+    background-color: transparent !important;
+    text-align: center;
+    height: 170px;
+  }
+  #video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+  }
+
+  .btn-primary {
+    background-color: #DC143C !important;
+    border-color: #DC143C !important;
+  }
+  
+  .btn-primary:hover {
+    background-color: #000000 !important;
+    border-color: #000000 !important;
+  }
+  
+  .features-section {
+    padding: 100px 0;
+    background-color: #000000;
+  }
+  
+  .feature-item {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .feature-item i {
+    color: #fff;
+    font-size: 3em;
+    margin-bottom: 20px;
+  }
+  
+  .feature-item h3 {
+    margin-bottom: 20px;
+  }
+  
+  .games-section {
+    padding: 100px 0;
+    background-color: #DC143C;
+    color: #fff;
+  }
+  
+  .game-item {
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  
+  .game-item img {
+    max-width: 50%;
+    max-height: 50%;
+    width: auto;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+  }
+  
+  .game-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+
+.cloud-gaming-section {
+  padding: 100px 0;
+  background-color: #DC143C;
+  color: #ffffff;
+  text-align: right;
+}
+
+.cloud-gaming-section h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.bullet-points {
+  list-style: none;
+  padding: 0;
+  text-align: right;
+}
+
+.bullet-points li {
+  margin-bottom: 10px;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.bullet-points li i {
+  margin-right: 10px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.cloud-gaming-image {
+  max-width: 20%;
+  height: 20%;
+  display: block;
+  margin-bottom: 20px;
+  float: left;
+  margin-right: 20px;
+}
+ 
+  .game-item h3 {
+    margin-bottom: 20px;
+  }
+  
+  .game-item p {
+    margin-bottom: 20px;
+  }
+  
+  footer {
+    padding: 50px 0;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+  }
+  
