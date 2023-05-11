@@ -1,32 +1,24 @@
 const body = document.querySelector("body"),
-      modeToggle = body.querySelector(".mode-toggle");
-      sidebar = body.querySelector("nav");
+      modeToggle = body.querySelector(".mode-toggle"),
+      sidebar = body.querySelector("nav"),
       sidebarToggle = body.querySelector(".sidebar-toggle");
 
-let getMode = localStorage.getItem("mode");
-if(getMode && getMode ==="dark"){
-    body.classList.toggle("dark");
+let mode = localStorage.getItem("mode");
+let status = localStorage.getItem("status");
+
+if (mode === "dark") {
+  body.classList.add("dark");
+}
+if (status === "close") {
+  sidebar.classList.add("close");
 }
 
-let getStatus = localStorage.getItem("status");
-if(getStatus && getStatus ==="close"){
-    sidebar.classList.toggle("close");
-}
-
-modeToggle.addEventListener("click", () =>{
-    body.classList.toggle("dark");
-    if(body.classList.contains("dark")){
-        localStorage.setItem("mode", "dark");
-    }else{
-        localStorage.setItem("mode", "light");
-    }
+modeToggle.addEventListener("click", () => {
+  body.classList.toggle("dark");
+  localStorage.setItem("mode", body.classList.contains("dark") ? "dark" : "light");
 });
 
 sidebarToggle.addEventListener("click", () => {
-    sidebar.classList.toggle("close");
-    if(sidebar.classList.contains("close")){
-        localStorage.setItem("status", "close");
-    }else{
-        localStorage.setItem("status", "open");
-    }
-})
+  sidebar.classList.toggle("close");
+  localStorage.setItem("status", sidebar.classList.contains("close") ? "close" : "open");
+});

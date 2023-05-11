@@ -19,7 +19,7 @@ body {
   .jumbotron {
     background-color: transparent !important;
     text-align: center;
-    height: 170px;
+    height: 250px;
   }
   #video-background {
     position: fixed;
@@ -66,6 +66,13 @@ body {
     background-color: #DC143C;
     color: #fff;
   }
+
+  .col-md-12{
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    align-items: center;
+    padding-bottom: 30px;
+  }
   
   .game-item {
     margin-bottom: 50px;
@@ -90,7 +97,7 @@ body {
 .feature-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 20px;
+  grid-gap: 150px;
 }
 
 .cloud-gaming-section {
@@ -145,8 +152,8 @@ body {
     margin-bottom: 20px;
   }
   
-  footer {
-    padding: 50px 0;
+  .footer-txt {
+    padding: 20px 0;
     background-color: #000;
     color: #fff;
     text-align: center;
