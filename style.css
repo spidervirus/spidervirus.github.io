@@ -1,7 +1,9 @@
 body {
-    background-color: #000000;
-    color: #fff;
-    font-family: 'Roboto', sans-serif;
+  background-color: #000000;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
   }
   
   a {
@@ -158,4 +160,61 @@ body {
     color: #fff;
     text-align: center;
   }
+  @media only screen and (max-width: 600px) {
+    /* Styles for mobile screens */
+    .jumbotron {
+      height: 150px;
+    }
   
+    .features-section, .games-section, .cloud-gaming-section {
+      padding: 50px 0;
+    }
+  
+    .game-grid, .feature-grid {
+      display: block;
+    }
+  
+    .col-md-12{
+      font-size: 20px;
+      padding-bottom: 20px;
+    }
+  
+    .cloud-gaming-image {
+      max-width: 50%;
+      height: 50%;
+      float: none;
+      margin-right: 0;
+    }
+  }
+  
+  @media only screen and (min-width: 601px) and (max-width: 1024px) {
+    /* Styles for tablets */
+    .jumbotron {
+      height: 200px;
+    }
+  
+    .features-section, .games-section, .cloud-gaming-section {
+      padding: 75px 0;
+    }
+  
+    .col-md-12{
+      font-size: 25px;
+      padding-bottom: 25px;
+    }
+  }
+  
+  @media only screen and (min-width: 1025px) {
+    /* Styles for desktops */
+    .jumbotron {
+      height: 250px;
+    }
+  
+    .features-section, .games-section, .cloud-gaming-section {
+      padding: 100px 0;
+    }
+  
+    .col-md-12{
+      font-size: 30px;
+      padding-bottom: 30px;
+    }
+  }
