@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Cloud Gaming Platform</title>
+        <link  rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+JvoWRt8bHjLQ9gXJ6l27QIXt2Z+Uu"
+            crossorigin="anonymous"
+        >
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/navbar.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.2.0/css/all.css">
+    </head>
+    <body>
+        <navbar>
+            <input type="checkbox" id="check">
+            <label for="check">
+                <i class="fas fa-bars" id="btn"></i>
+                <i class="fas fa-times" id="cancel"></i>
+            </label>
+            <input type="checkbox" id="check">
+            <label for="check">
+                <i class="fas fa-bars" id="btn"></i>
+                <i class="fas fa-times" id="cancel"></i>
+            </label>
+            <div class="sidebar">
+                <header>SkyPlay</header>
+                <a href="index.html" class="active">
+                    <i class="fas fa-qrcode"></i>
+                    <span>Home</span>
+                </a>
+                <a href="pricing.html">
+                    <i class="fa-solid fa-money-bill fa-flip"></i>
+                    <span>Pricing</span>
+                </a>
+                <a href="#">
+                    <i class="fas fa-stream"></i>
+                    <span>Games</span>
+                </a>
+                <a href="faq.html">
+                    <i class="fas fa-calendar"></i>
+                    <span>FAQ</span>
+                </a>
+                <a href="#">
+                    <i class="far fa-question-circle"></i>
+                    <span>About</span>
+                </a>
+                <a href="#">
+                    <i class="far fa-envelope"></i>
+                    <span>Contact</span>
+                </a>
+                <a href="login.html">
+                    <i class="fas fa-sliders-h"></i>
+                    <span>Login</span>
+                </a>
+                <a href="#">
+                    <i class="fa fa-user-plus"></i>
+                    <span>Register</span>
+                </a>
+            </div>
+        </navbar>
+        <!-- Pricing section -->
+        <br>
+        <br>
+        <br>
+        <header>
+            <h1>Pricing</h1>
+            <div class="tab-buttons">
+                <button class="tab-btn active" data-tab="hourly">Hourly</button>
+                <button class="tab-btn" data-tab="monthly">Monthly</button>
+            </div>
+        </header>
+        <div class="pricing-container">
+            <div class="tab-content" id="hourly">
+                <div class="pricing-card">
+                    <h2>Hourly Plan 1</h2>
+                    <p>Description of the plan.</p>
+                    <p class="price">$10/hour</p>
+                    <ul>
+                        <li>Feature 1</li>
+                        <li>Feature 2</li>
+                        <li>Feature 3</li>
+                    </ul>
+                    <a href="#" class="btn">Sign up</a>
+                </div>
+                <div class="pricing-card">
+                    <h2>Hourly Plan 2</h2>
+                    <p>Description of the plan.</p>
+                    <p class="price">$15/hour</p>
+                    <ul>
+                        <li>Feature 1</li>
+                        <li>Feature 2</li>
+                        <li>Feature 3</li>
+                    </ul>
+                    <a href="#" class="btn">Sign up</a>
+                </div>
+            </div>
+            <div class="tab-content" id="monthly">
+                <div class="pricing-card">
+                    <h2>Monthly Plan 1</h2>
+                    <p>Description of the plan.</p>
+                    <p class="price">$100/month</p>
+                    <ul>
+                        <li>Feature 1</li>
+                        <li>Feature 2</li>
+                        <li>Feature 3</li>
+                    </ul>
+                    <a href="#" class="btn">Sign up</a>
+                </div>
+                <div class="pricing-card">
+                    <h2>Monthly Plan 2</h2>
+                    <p>Description of the plan.</p>
+                    <p class="price">$150/month</p>
+                    <ul>
+                        <li>Feature 1</li>
+                        <li>Feature 2</li>
+                        <li>Feature 3</li>
+                    </ul>
+                    <a href="#" class="btn">Sign up</a>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="row">
+                <div class="footer-txt">
+                    <p>&copy; 2023 SkyPlay Cloud Gaming Platform. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYU"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+JvoWRt8bHjLQ9gXJ6l27QIXt2Z+Uu"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="./js/navbar.js"></script>
+        <script>
+    document.addEventListener("DOMContentLoaded", function() {
+  var tabButtons = document.querySelectorAll(".tab-btn");
+  var tabContents = document.querySelectorAll(".tab-content");
+
+  tabButtons.forEach(function(button) {
+    button.addEventListener("click", function() {
+      tabButtons.forEach(function(btn) {
+        btn.classList.remove("active");
+      });
+      tabContents.forEach(function(content) {
+        content.classList.remove("active");
+      });
+
+      var tabId = button.getAttribute("data-tab");
+      button.classList.add("active");
+      document.getElementById(tabId).classList.add("active");
+    });
+  });
+});
+        </script>
+    </body>
+</html>

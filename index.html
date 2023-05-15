@@ -1,180 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Cloud Gaming Platform</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+JvoWRt8bHjLQ9gXJ6l27QIXt2Z+Uu" crossorigin="anonymous">
-	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="navbar.css">
- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.2.0/css/all.css">
-</head>
-<body>
-    <input type="checkbox" id="check">
-    <label for="check">
-      <i class="fas fa-bars" id="btn"></i>
-      <i class="fas fa-times" id="cancel"></i>
-    </label>
-    <div class="sidebar">
-      <header>SkyPlay</header>
-      <a href="#" class="active">
-        <i class="fas fa-qrcode"></i>
-        <span>Home</span>
-      </a>
-      <a href="#">
-        <i class="fa-solid fa-money-bill fa-flip"></i>
-        <span>Pricing</span>
-      </a>
-      <a href="#">
-        <i class="fas fa-stream"></i>
-        <span>Games</span>
-      </a>
-      <a href="#">
-         <i class="fas fa-calendar"></i>
-        <span>FAQ</span>
-      </a>
-      <a href="#">
-        <i class="far fa-question-circle"></i>
-        <span>About</span>
-      </a>
-      <a href="#">
-        <i class="far fa-envelope"></i>
-        <span>Contact</span>
-      </a>
-      <a href="login.html">
-        <i class="fas fa-sliders-h"></i>
-        <span>Login</span>
-      </a>
-
-
-	  <a href="#">
-        <i class="fa fa-user-plus"></i>
-        <span>Register</span>
-      </a>
-      
-    </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <div class="jumbotron jumbotron-fluid">
-      <div class="container">
-        <h1 class="display-4">Play Your Favorite Games Anywhere, Anytime</h1>
-        <p class="lead">Experience high-quality gaming on any device with an internet connection.</p>
-        <a href="#" class="btn btn-primary btn-lg">Get Started</a>
-        <video id="video-background" autoplay muted loop controls style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;">
-          <source src="bg-video.webm" type="video/mp4" quality="auto">
-          Your browser does not support the video tag.
-        </video>
-      </div>
-    </div>
-    <section class="cloud-gaming-section">
-      <div class="container">
-          <div class="row">
-              <div class="col-md-6">
-                  <img src="your-image.jpg" alt="Cloud Gaming Image" class="cloud-gaming-image">
-              </div>
-              <div class="col-md-6">
-                  <h2>What is Cloud Gaming?</h2>
-                  <ul class="bullet-points">
-                      <li><i class="fas fa-check"></i> No need to download or install games</li>
-                      <li><i class="fas fa-check"></i> Play games directly on your browser</li>
-                      <li><i class="fas fa-check"></i> Requires a broadband connection of 20Mbps or more</li>
-                  </ul>
-              </div>
-          </div>
-      </div>
-  </section>
-  
-
-    <section class="features-section">
-      <div class="container">
-          <div class="row feature-grid">
-              <div class="col-md-4">
-                  <div class="feature-item">
-                      <i class="fa fa-gamepad fa-3x"></i>
-                      <h3>Access to Hundreds of Games</h3>
-                      <p>Choose from a vast library of games, from AAA titles to indie gems.</p>
-                  </div>
-              </div>
-              <div class="col-md-4">
-                  <div class="feature-item">
-                      <i class="fa fa-laptop fa-3x"></i>
-                      <h3>Play on Any Device</h3>
-                      <p>Stream games on your PC, laptop, tablet, or even your smartphone.</p>
-                  </div>
-              </div>
-              <div class="col-md-4">
-                  <div class="feature-item">
-                      <i class="far fa-clock fa-3x"></i>
-                      <h3>No Downloads or Updates Required</h3>
-                      <p>Play games instantly without the need for downloads or updates.</p>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </section>
-  
-
-  <section class="games-section">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h2>Featured Games</h2>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Cloud Gaming Platform</title>
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+JvoWRt8bHjLQ9gXJ6l27QIXt2Z+Uu"
+            crossorigin="anonymous">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/navbar.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.2.0/css/all.css">
+    </head>
+    <body>
+        <input type="checkbox" id="check">
+        <label for="check">
+            <i class="fas fa-bars" id="btn"></i>
+            <i class="fas fa-times" id="cancel"></i>
+        </label>
+        <div class="sidebar">
+            <header>SkyPlay</header>
+            <a href="index.html" class="active">
+                <i class="fas fa-qrcode"></i>
+                <span>Home</span>
+            </a>
+            <a href="pricing.html">
+                <i class="fa-solid fa-money-bill fa-flip"></i>
+                <span>Pricing</span>
+            </a>
+            <a href="#">
+                <i class="fas fa-stream"></i>
+                <span>Games</span>
+            </a>
+            <a href="faq.html">
+                <i class="fas fa-calendar"></i>
+                <span>FAQ</span>
+            </a>
+            <a href="#">
+                <i class="far fa-question-circle"></i>
+                <span>About</span>
+            </a>
+            <a href="#">
+                <i class="far fa-envelope"></i>
+                <span>Contact</span>
+            </a>
+            <a href="login.html">
+                <i class="fas fa-sliders-h"></i>
+                <span>Login</span>
+            </a>
+            <a href="#">
+                <i class="fa fa-user-plus"></i>
+                <span>Register</span>
+            </a>
+        </div>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">Play Your Favorite Games Anywhere, Anytime</h1>
+                <p class="lead">Experience high-quality gaming on any device with an internet connection.</p>
+                <a href="#" class="btn btn-primary btn-lg">Get Started</a>
+                <video
+                    id="video-background"
+                    autoplay
+                    muted
+                    loop
+                    controls
+                    style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;"
+                >
+                    <source src="./images/bg-video.webm" type="video/mp4" quality="auto">
+                    Your browser does not support the video tag.
+                </video>
             </div>
         </div>
-        <div class="row game-grid">
-            <div class="col-md-4">
-                <div class="game-item">
-                    <img src="game1.jpg" alt="Game 1">
-                    <h3>Assassin's Creed Valhalla</h3>
-                    <p>Join the Viking invasion of England in this action-packed adventure.</p>
-                    <a href="#" class="btn btn-primary">Play Now</a>
+        <section class="cloud-gaming-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="./images/your-image.jpg" alt="Cloud Gaming Image" class="cloud-gaming-image">
+                    </div>
+                    <div class="col-md-6">
+                        <h2>What is Cloud Gaming?</h2>
+                        <ul class="bullet-points">
+                            <li>
+                                <i class="fas fa-check"></i>
+                                No need to download or install games
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                Play games directly on your browser
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                Requires a broadband connection of 20Mbps or more
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="game-item">
-                    <img src="game2.jpg" alt="Game 2">
-                    <h3>Cyberpunk 2077</h3>
-                    <p>Explore the dystopian future of Night City in this sci-fi RPG.</p>
-                    <a href="#" class="btn btn-primary">Play Now</a>
+        </section>
+        <section class="features-section">
+            <div class="container">
+                <div class="row feature-grid">
+                    <div class="col-md-4">
+                        <div class="feature-item">
+                            <i class="fa fa-gamepad fa-3x"></i>
+                            <h3>Access to Hundreds of Games</h3>
+                            <p>Choose from a vast library of games, from AAA titles to indie gems.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="feature-item">
+                            <i class="fa fa-laptop fa-3x"></i>
+                            <h3>Play on Any Device</h3>
+                            <p>Stream games on your PC, laptop, tablet, or even your smartphone.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="feature-item">
+                            <i class="far fa-clock fa-3x"></i>
+                            <h3>No Downloads or Updates Required</h3>
+                            <p>Play games instantly without the need for downloads or updates.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="game-item">
-                    <img src="game3.jpg" alt="Game 3">
-                    <h3>Hades</h3>
-                    <p>Battle your way through the underworld in this critically acclaimed indie game.</p>
-                    <a href="#" class="btn btn-primary">Play Now</a>
+        </section>
+        <section class="games-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>Featured Games</h2>
+                    </div>
+                </div>
+                <div class="row game-grid">
+                    <div class="col-md-4">
+                        <div class="game-item">
+                            <img src="./images/game1.jpg" alt="Game 1">
+                            <h3>Assassin's Creed Valhalla</h3>
+                            <p>Join the Viking invasion of England in this action-packed adventure.</p>
+                            <a href="#" class="btn btn-primary">Play Now</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="game-item">
+                            <img src="./images/game2.jpg" alt="Game 2">
+                            <h3>Cyberpunk 2077</h3>
+                            <p>Explore the dystopian future of Night City in this sci-fi RPG.</p>
+                            <a href="#" class="btn btn-primary">Play Now</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="game-item">
+                            <img src="./images/game3.jpg" alt="Game 3">
+                            <h3>Hades</h3>
+                            <p>Battle your way through the underworld in this critically acclaimed indie game.</p>
+                            <a href="#" class="btn btn-primary">Play Now</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
-
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="footer-txt">
-                    <p>&copy; 2023 SkyPlay Cloud Gaming Platform. All rights reserved.</p>
+        </section>
+        <section class="how-it-works-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>How It Works</h2>
+                        <p>We run the games & you stream it.</p>
+                        <ul class="bullet-points">
+                            <li>
+                                <i class="far fa-clock"></i>
+                                The games are installed on our servers
+                            </li>
+                            <li>
+                                <i class="fas fa-desktop"></i>
+                                We stream the video to your device
+                            </li>
+                            <li>
+                                <i class="far fa-paper-plane"></i>
+                                You control the game via our service
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
-    
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.1/dist/umd/popper-base.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+JvoWRt8bHjLQ9gXJ6l27QIXt2Z+Uu" crossorigin="anonymous"></script>
-	<script src="navbar.js"></script>
-
-</body>
-</html>    
+        </section>
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="footer-txt">
+                        <p>&copy; 2023 SkyPlay Cloud Gaming Platform. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.1/dist/umd/popper-base.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+JvoWRt8bHjLQ9gXJ6l27QIXt2Z+Uu" crossorigin="anonymous"></script>
+        <script src="./js/navbar.js"></script>
+    </body>
+</html>
