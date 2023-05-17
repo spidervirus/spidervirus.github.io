@@ -255,10 +255,12 @@ body {
     transform: translateY(0);
   }
 }
-.pricing-section {
-  background-color: #131313;
-  color: #ffffff;
-  padding: 40px 0;
+.pricing-section h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #f3dc0c;
+  text-align: center;
+
 }
 .pricing-plans {
   display: flex;
@@ -269,19 +271,22 @@ body {
 .plan {
   flex-basis: calc(33.3333% - 20px);
   padding: 20px;
-  background-color: #3b3b43;
+  background-color: #1a1a1a;
   border-radius: 5px;
   text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .plan h3 {
   font-size: 24px;
   margin-bottom: 10px;
+  color: #f3dc0c;
 }
 
 .plan p {
   font-size: 18px;
   margin-bottom: 20px;
+  color: #ffffff;
 }
 
 .plan ul {
@@ -292,6 +297,7 @@ body {
 
 .plan ul li {
   margin-bottom: 10px;
+  color: #ffffff;
 }
 
 .btn {
@@ -309,7 +315,15 @@ body {
 .btn:hover {
   background-color: #f3d050;
 }
- 
+
+/* Neon effect */
+    .neon-text {
+        text-shadow: 0 0 10px #f3dc0c, 0 0 20px #f3dc0c, 0 0 30px #f3dc0c;
+    }
+
+.neon-button {
+  box-shadow: 0 0 10px #f3dc0c, 0 0 20px #f3dc0c, 0 0 30px #f3dc0c, 0 0 40px #f3dc0c;
+}
     </style>
 </head>
 <body>
@@ -421,7 +435,7 @@ body {
 
     <section id="pricing" class="pricing-section">
         <div class="container">
-            <h2>Pricing</h2>
+            <h2 class="neon-text">Pricing</h2>
             <div class="pricing-plans">
                 <div class="plan">
                     <h3>Basic</h3>
