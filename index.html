@@ -16,6 +16,10 @@ body {
 }
 
 .header {
+position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -102,6 +106,13 @@ body {
   max-width: 1200px;
   padding: 20px;
 }
+.container h2 {
+  font-size: 36px;
+  text-align: center;
+  color: #f3dc0c;
+  text-shadow: 0 0 10px #f3dc0c, 0 0 20px #f3dc0c, 0 0 30px #f3dc0c;
+}
+
 
 .container h3 {
   font-size: 36px;
@@ -256,65 +267,71 @@ body {
     transform: translateY(0);
   }
 }
-.pricing-section h2 {
+.pricing-section {
+  background-color: #131313;
+  color: #ffffff;
+  padding: 60px 0;
+}
+.section-heading {
   font-size: 36px;
-  margin-bottom: 20px;
-  color: #f3dc0c;
+  margin-bottom: 40px;
   text-align: center;
-
+  color: #f3dc0c;
+  text-shadow: 0 0 10px #f3dc0c, 0 0 20px #f3dc0c, 0 0 30px #f3dc0c;
 }
 .pricing-plans {
   display: flex;
-  justify-content: space-between;
-  margin-top: 30px;
+  justify-content: center;
+  align-items: stretch;
+  gap: 30px;
 }
 
-.plan {
-  flex-basis: calc(33.3333% - 20px);
-  padding: 20px;
-  background-color: #1a1a1a;
-  border-radius: 5px;
+.pricing-plan {
+  background-color: #3b3b43;
+  padding: 40px;
+  border-radius: 10px;
   text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.plan h3 {
+.plan-title {
   font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.plan-price {
+  font-size: 36px;
   margin-bottom: 10px;
   color: #f3dc0c;
 }
 
-.plan p {
+.plan-price span {
   font-size: 18px;
-  margin-bottom: 20px;
   color: #ffffff;
 }
 
-.plan ul {
-  list-style-type: disc;
-  margin-bottom: 20px;
-  padding-left: 20px;
+.plan-features {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 30px;
 }
 
-.plan ul li {
+.plan-features li {
   margin-bottom: 10px;
-  color: #ffffff;
 }
 
-.btn {
-  display: inline-block;
+.btn-select-plan {
   background-color: #f3dc0c;
   color: #3b3b43;
-  padding: 10px 20px;
+  padding: 12px 24px;
   border: none;
   border-radius: 5px;
-  font-size: 18px;
-  text-decoration: none;
-  transition: background-color 0.3s;
+  font-size: 20px;
+  cursor: pointer;
+  transition: transform 0.3s;
 }
 
-.btn:hover {
-  background-color: #f3d050;
+.btn-select-plan:hover {
+  transform: scale(1.05);
 }
 
 /* Neon effect */
@@ -326,17 +343,197 @@ body {
 .neon-button {
   box-shadow: 0 0 10px #f3dc0c, 0 0 20px #f3dc0c, 0 0 30px #f3dc0c, 0 0 40px #f3dc0c;
 }
+hr {
+  border: none;
+  height: 1px;
+  background-color: #ccc;
+  margin: 20px 0;
+}
+.faq-section {
+  background-color: #131313;
+  padding: 80px 0;
+  color: #ffffff;
+  text-align: center;
+}
+
+.section-heading {
+  font-size: 48px;
+  margin-bottom: 60px;
+}
+
+.neon-text {
+  text-shadow: 0 0 10px #f3dc0c, 0 0 20px #f3dc0c, 0 0 30px #f3dc0c;
+}
+
+.faq-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.faq-item {
+  background-color: #3b3b43;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.faq-item:hover {
+  transform: scale(1.05);
+}
+
+.faq-question {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.faq-answer {
+  font-size: 18px;
+  color: #bfbfbf;
+}
+.about-section {
+  background-color: #131313;
+  padding: 80px 0;
+  color: #ffffff;
+  text-align: center;
+}
+
+.section-heading {
+  font-size: 48px;
+  margin-bottom: 60px;
+}
+
+.about-subheading {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.about-description {
+  font-size: 18px;
+  color: #bfbfbf;
+}
+
+.timeline-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.timeline-marker {
+  width: 16px;
+  height: 16px;
+  background-color: #f3dc0c;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.timeline-content {
+  margin-bottom: 30px;
+}
+
+.timeline-date {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.timeline-event {
+  font-size: 18px;
+  color: #bfbfbf;
+}
+.contact-section {
+  background-color: #131313;
+  color: #ffffff;
+  padding: 80px 0;
+}
+
+
+.contact-form {
+  margin-bottom: 40px;
+}
+
+.contact-form form {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+}
+
+.contact-form .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #262626;
+  color: #ffffff;
+  box-shadow: 0 0 5px rgba(243, 220, 12, 0.5);
+}
+
+.contact-form button {
+  background-color: #f3dc0c;
+  color: #3b3b43;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.contact-form button:hover {
+  transform: scale(1.05);
+}
+
+.contact-details {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.contact-details h3 {
+  margin-bottom: 16px;
+  color: #f3dc0c;
+}
+
+.contact-details p {
+  color: #ffffff;
+}
+
+.contact-details a {
+  color: #f3dc0c;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contact-details a:hover {
+  color: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
     </style>
 </head>
 <body>
     <div class="header">
         <h1 class="neon-text"><i class="bi bi-lightning"></i> SkyPlay</h1>
-        <ul class="nav-bar">
-          <li><a href="#pricing" class="neon-text"><i class="bi bi-cash"></i> Pricing</a></li>
-          <li><a href="#faq" class="neon-text"><i class="bi bi-question-circle"></i> FAQ</a></li>
-          <li><a href="#about" class="neon-text"><i class="bi bi-info-circle"></i> About</a></li>
-          <li><a href="#contact" class="neon-text"><i class="bi bi-envelope"></i> Contact</a></li>
-        </ul>
+    <ul class="nav-bar">
+    <li><a href="#pricing" class="neon-text smooth-scroll"><i class="bi bi-cash"></i> Pricing</a></li>
+    <li><a href="#faq" class="neon-text smooth-scroll"><i class="bi bi-question-circle"></i> FAQ</a></li>
+    <li><a href="#about" class="neon-text smooth-scroll"><i class="bi bi-info-circle"></i> About</a></li>
+    <li><a href="#contact" class="neon-text smooth-scroll"><i class="bi bi-envelope"></i> Contact</a></li>
+  </ul>
       </div>
       
       
@@ -374,7 +571,7 @@ body {
             </div>
             <div class="col-md-6">
                 <div class="container-content">
-                    <h3>What is Cloud Gaming?</h3>
+                    <h3 class="neon-text">What is Cloud Gaming?</h3>
                     <ul class="list-unstyled">
                         <li><i class="bi bi-download"></i> No need to download or install games</li>
                         <li><i class="bi bi-laptop"></i> Play games directly on your browser</li>
@@ -437,52 +634,200 @@ body {
         </div>
     </div>
 
+    <hr>
+
     <section id="pricing" class="pricing-section">
         <div class="container">
-            <h2 class="neon-text">Pricing</h2>
-            <div class="pricing-plans">
-                <div class="plan">
-                    <h3>Basic</h3>
-                    <p>$9.99/month</p>
-                    <ul>
-                        <li>Access to 50 games</li>
-                        <li>Standard video quality</li>
-                        <li>Email support</li>
-                    </ul>
-                    <a href="#" class="btn">Get Started</a>
-                </div>
-                <div class="plan">
-                    <h3>Pro</h3>
-                    <p>$19.99/month</p>
-                    <ul>
-                        <li>Access to 100+ games</li>
-                        <li>HD video quality</li>
-                        <li>24/7 live chat support</li>
-                    </ul>
-                    <a href="#" class="btn">Get Started</a>
-                </div>
-                <div class="plan">
-                    <h3>Premium</h3>
-                    <p>$29.99/month</p>
-                    <ul>
-                        <li>Access to all games</li>
-                        <li>Ultra HD video quality</li>
-                        <li>Priority email &amp; phone support</li>
-                    </ul>
-                    <a href="#" class="btn">Get Started</a>
-                </div>
+          <h2 class="section-heading">Pricing</h2>
+          <div class="pricing-plans">
+            <div class="pricing-plan">
+              <h3 class="plan-title neon-text">Basic</h3>
+              <p class="plan-price">$9.99<span>/month</span></p>
+              <ul class="plan-features">
+                <li>Access to 50+ games</li>
+                <li>Standard quality streaming</li>
+                <li>Email support</li>
+              </ul>
+              <button class="btn-select-plan">Select Plan</button>
             </div>
+            <div class="pricing-plan">
+              <h3 class="plan-title neon-text">Pro</h3>
+              <p class="plan-price">$19.99<span>/month</span></p>
+              <ul class="plan-features">
+                <li>Access to 200+ games</li>
+                <li>HD quality streaming</li>
+                <li>24/7 customer support</li>
+              </ul>
+              <button class="btn-select-plan">Select Plan</button>
+            </div>
+            <div class="pricing-plan">
+              <h3 class="plan-title neon-text">Premium</h3>
+              <p class="plan-price">$29.99<span>/month</span></p>
+              <ul class="plan-features">
+                <li>Access to 500+ games</li>
+                <li>Ultra HD quality streaming</li>
+                <li>Priority customer support</li>
+              </ul>
+              <button class="btn-select-plan">Select Plan</button>
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
+      
+      <hr>
 
+      <section id="faq" class="faq-section">
+        <div class="container">
+          <h2 class="section-heading neon-text">FAQ</h2>
+          <div class="faq-items">
+            <div class="faq-item">
+              <h4 class="faq-question neon-text">How do I create an account?</h4>
+              <p class="faq-answer">To create an account, simply click on the "Sign Up" button and fill out the registration form.</p>
+            </div>
+            <div class="faq-item">
+              <h4 class="faq-question neon-text">Can I play games on multiple devices?</h4>
+              <p class="faq-answer">Yes, you can play games on multiple devices such as your PC, laptop, tablet, or smartphone.</p>
+            </div>
+            <div class="faq-item">
+              <h4 class="faq-question neon-text">What internet speed is required for cloud gaming?</h4>
+              <p class="faq-answer">A broadband connection of 20Mbps or more is recommended for optimal cloud gaming experience.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <hr>
+
+      <section id="about" class="about-section">
+        <div class="container">
+          <h2 class="section-heading">About Us</h2>
+          <div class="about-content">
+            <div class="about-story">
+              <h3 class="about-subheading neon-text">Our Story</h3>
+              <p class="about-description">SkyPlay was founded with a passion for revolutionizing the gaming industry. Our journey started in 20XX with a vision to bring cloud gaming to the masses and redefine how people experience and access their favorite games.</p>
+            </div>
+            <div class="about-team">
+              <h3 class="about-subheading neon-text">Our Team</h3>
+              <p class="about-description">At SkyPlay, we have assembled a dedicated and talented team of gaming enthusiasts, developers, and engineers. Together, we strive to deliver the best cloud gaming experience to our users and push the boundaries of what's possible.</p>
+            </div>
+            <div class="about-mission">
+              <h3 class="about-subheading neon-text">Our Mission</h3>
+              <p class="about-description">Our mission is to provide seamless, high-quality cloud gaming that empowers players to enjoy their favorite games anytime, anywhere. We are committed to making gaming accessible, convenient, and enjoyable for all.</p>
+            </div>
+          </div>
+          <div class="timeline">
+            <h3 class="about-subheading neon-text">Timeline</h3>
+            <ul class="timeline-list">
+              <li>
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <h4 class="timeline-date">20XX</h4>
+                  <p class="timeline-event">Company founded</p>
+                </div>
+              </li>
+              <li>
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <h4 class="timeline-date">20XX</h4>
+                  <p class="timeline-event">Reached 1 million users milestone</p>
+                </div>
+              </li>
+              <li>
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <h4 class="timeline-date">20XX</h4>
+                  <p class="timeline-event">Introduced new game streaming technology</p>
+                </div>
+              </li>
+              <!-- Add more timeline events as needed -->
+            </ul>
+          </div>
+        </div>
+      </section>
+      
+      
+      <hr>
+
+      <section id="contact" class="contact-section">
+        <div class="container">
+          <h2>Contact Us</h2>
+          <div class="contact-form">
+            <form id="contact-form">
+              <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required>
+              </div>
+              <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+              </div>
+              <button type="submit" class="btn-secondary">Submit</button>
+            </form>
+          </div>
+          <div class="contact-details">
+            <h3>Contact Details</h3>
+            <p><strong>Email:</strong> support@skyplay.com</p>
+            <p><strong>Phone:</strong> +1 123-456-7890</p>
+          </div>
+        </div>
+      </section>
+      
+      <hr>
     
 
     <div class="footer">
         <p>&copy; 2023 SkyPlay. All rights reserved.</p>
     </div>
 
+    <script>
+        // Get the contact form element
+        const contactForm = document.getElementById('contact-form');
+      
+        // Add event listener to the form submission
+        contactForm.addEventListener('submit', function(event) {
+          event.preventDefault(); // Prevent the form from submitting
+      
+          // Get the form data
+          const formData = new FormData(this);
+      
+          // Process the form data (you can customize this part to send the form data to your server or perform any desired actions)
+          const name = formData.get('name');
+          const email = formData.get('email');
+          const subject = formData.get('subject');
+          const message = formData.get('message');
+      
+          // Display the form data (you can modify this part to suit your needs)
+          console.log('Name:', name);
+          console.log('Email:', email);
+          console.log('Subject:', subject);
+          console.log('Message:', message);
+      
+          // Reset the form
+          this.reset();
+        });
+      </script>
     
-    
+    <script>
+        // Smooth scrolling functionality
+document.querySelectorAll('.smooth-scroll').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+});
+
+    </script>
 
     <script src="js/bootstrap.bundle.min.js"></script>
 </body>
