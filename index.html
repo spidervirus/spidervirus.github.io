@@ -40,6 +40,7 @@ body {
   margin-right: 20px;
   font-size: 18px;
   cursor: pointer;
+  
 }
 
 .nav-bar li:hover {
@@ -318,6 +319,7 @@ body {
 
 /* Neon effect */
     .neon-text {
+        color: #f3dc0c;
         text-shadow: 0 0 10px #f3dc0c, 0 0 20px #f3dc0c, 0 0 30px #f3dc0c;
     }
 
@@ -328,14 +330,16 @@ body {
 </head>
 <body>
     <div class="header">
-        <h1>SkyPlay</h1>
+        <h1 class="neon-text"><i class="bi bi-lightning"></i> SkyPlay</h1>
         <ul class="nav-bar">
-            <li><i class="bi bi-cash"></i> Pricing</li>
-            <li><i class="bi bi-question-circle"></i> FAQ</li>
-            <li><i class="bi bi-info-circle"></i> About</li>
-            <li><i class="bi bi-envelope"></i> Contact</li>
+          <li><a href="#pricing" class="neon-text"><i class="bi bi-cash"></i> Pricing</a></li>
+          <li><a href="#faq" class="neon-text"><i class="bi bi-question-circle"></i> FAQ</a></li>
+          <li><a href="#about" class="neon-text"><i class="bi bi-info-circle"></i> About</a></li>
+          <li><a href="#contact" class="neon-text"><i class="bi bi-envelope"></i> Contact</a></li>
         </ul>
-    </div>
+      </div>
+      
+      
 
     <div class="cta">
         <video autoplay loop muted class="background-video">
