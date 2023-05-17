@@ -1,202 +1,372 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Cloud Gaming Platform</title>
-        <link
-            rel="stylesheet"
-            href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+JvoWRt8bHjLQ9gXJ6l27QIXt2Z+Uu"
-            crossorigin="anonymous">
-        <link rel="stylesheet" href="./css/style.css">
-        <link rel="stylesheet" href="./css/navbar.css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.2.0/css/all.css">
-    </head>
-    <body>
-        <input type="checkbox" id="check">
-        <label for="check">
-            <i class="fas fa-bars" id="btn"></i>
-            <i class="fas fa-times" id="cancel"></i>
-        </label>
-        <div class="sidebar">
-            <header>SkyPlay</header>
-            <a href="index.html" class="active">
-                <i class="fas fa-qrcode"></i>
-                <span>Home</span>
-            </a>
-            <a href="pricing.html">
-                <i class="fa-solid fa-money-bill fa-flip"></i>
-                <span>Pricing</span>
-            </a>
-            <a href="#">
-                <i class="fas fa-stream"></i>
-                <span>Games</span>
-            </a>
-            <a href="faq.html">
-                <i class="fas fa-calendar"></i>
-                <span>FAQ</span>
-            </a>
-            <a href="#">
-                <i class="far fa-question-circle"></i>
-                <span>About</span>
-            </a>
-            <a href="#">
-                <i class="far fa-envelope"></i>
-                <span>Contact</span>
-            </a>
-            <a href="login.html">
-                <i class="fas fa-sliders-h"></i>
-                <span>Login</span>
-            </a>
-            <a href="#">
-                <i class="fa fa-user-plus"></i>
-                <span>Register</span>
-            </a>
+<html>
+<head>
+    <title>SkyPlay</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+         body {
+            background: #131313;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #262626;
+            padding: 20px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #f3dc0c;
+        }
+
+        .nav-bar {
+            list-style-type: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-bar li {
+            margin-right: 20px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .nav-bar li:hover {
+            color: #f3dc0c;
+        }
+
+        .cta {
+            position: relative;
+            text-align: center;
+            overflow: hidden;
+            height: 100vh;
+            }
+
+        .cta video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 100%;
+            min-height: 100%;
+            width: 70%;
+            height: auto;
+            z-index: -1;
+        }
+
+        .cta .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #f3dc0c;
+            text-shadow: 0 0 10px #f3dc0c, 0 0 20px #f3dc0c, 0 0 30px #f3dc0c;
+        }
+
+        .cta button {
+            background-color: #f3dc0c;
+            color: #3b3b43;
+            padding: 16px 32px;
+            border: none;
+            border-radius: 5px;
+            font-size: 24px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .cta button:hover {
+            transform: scale(1.05);
+        }
+
+        .container {
+            margin: 40px auto;
+            max-width: 1200px;
+            padding: 20px;
+        }
+
+        .container h3 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            color: #f3dc0c;
+        }
+
+        .container ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: disc;
+        }
+
+        .container li {
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+
+        .container-image {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 5px;
+            filter: grayscale(100%) contrast(150%);
+        }
+
+        .container-content {
+            flex-grow: 1;
+        }
+
+        .section-heading {
+            font-size: 36px;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #f3dc0c;
+            text-shadow: 0 0 10px #f3dc0c, 0 0 20px #f3dc0c, 0 0 30px #f3dc0c;
+        }
+
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .feature {
+            text-align: center;
+            padding: 20px;
+            background-color: #3b3b43;
+            border-radius: 10px;
+            color: #ffffff;
+            filter: brightness(120%);
+            box-shadow: 0 0 20px rgba(243, 220, 12, 0.5);
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        .feature p {
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+
+        .feature h4 {
+            margin: 0;
+            font-size: 24px;
+            color: #f3dc0c;
+            text-shadow: 0 0 10px #f3dc0c, 0 0 20px #f3dc0c, 0 0 30px #f3dc0c;
+        }
+
+        .game {
+            text-align: center;
+            padding: 20px;
+            background-color: #3b3b43;
+            border-radius: 10px;
+            color: #ffffff;
+            filter: brightness(120%);
+            box-shadow: 0 0 20px rgba(243, 220, 12, 0.5);
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        .game-image {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .game-title {
+            font-size: 24px;
+            margin-top: 10px;
+            color: #f3dc0c;
+            text-shadow: 0 0 10px #f3dc0c, 0 0 20px #f3dc0c, 0 0 30px #f3dc0c;
+        }
+
+        .game-description {
+            margin-top: 5px;
+            color: #ffffff;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin-right: -15px;
+            margin-left: -15px;
+        }
+
+        .col-md-4 {
+            flex: 0 0 33.333333%;
+            max-width: 33.333333%;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-bottom: 30px;
+        }
+        .background-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 70%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            }
+
+            @media (max-width: 767px) {
+            .background-video {
+                position: relative;
+                width: 70%;
+                height: auto;
+            }
+            }
+        .footer {
+            background-color: #262626;
+            padding: 20px;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .footer p {
+            margin: 0;
+            color: #ffffff;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+ 
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>SkyPlay</h1>
+        <ul class="nav-bar">
+            <li><i class="bi bi-cash"></i> Pricing</li>
+            <li><i class="bi bi-question-circle"></i> FAQ</li>
+            <li><i class="bi bi-info-circle"></i> About</li>
+            <li><i class="bi bi-envelope"></i> Contact</li>
+        </ul>
+    </div>
+
+    <div class="cta">
+        <video autoplay loop muted class="background-video">
+            <source src="./images/intro.webm" type="video/mp4">
+        </video>
+        <div class="content">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <h2 class="animate__animated animate__bounceIn">Welcome to SkyPlay, the future of cloud gaming!</h2>
+            <button class="animate__animated animate__bounceIn">Start Playing Now!</button>
         </div>
-        <div class="jumbotron jumbotron-fluid">
-            <div class="container">
-                <h1 class="display-4">Play Your Favorite Games Anywhere, Anytime</h1>
-                <p class="lead">Experience high-quality gaming on any device with an internet connection.</p>
-                <a href="#" class="btn btn-primary btn-lg">Get Started</a>
-                <video
-                    id="video-background"
-                    autoplay
-                    muted
-                    loop
-                    controls
-                    style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;"
-                >
-                    <source src="./images/bg-video.webm" type="video/mp4" quality="auto">
-                    Your browser does not support the video tag.
-                </video>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <img class="container-image animate__animated animate__fadeInLeft" src="./images/Homepage_multidevice_transparent.png" alt="Cloud Gaming Image">
+            </div>
+            <div class="col-md-6">
+                <div class="container-content">
+                    <h3>What is Cloud Gaming?</h3>
+                    <ul class="list-unstyled">
+                        <li><i class="bi bi-download"></i> No need to download or install games</li>
+                        <li><i class="bi bi-laptop"></i> Play games directly on your browser</li>
+                        <li><i class="bi bi-speedometer2"></i> Requires a broadband connection of 20Mbps or more</li>
+                    </ul>
+                </div>
             </div>
         </div>
-        <section class="cloud-gaming-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <img src="./images/your-image.jpg" alt="Cloud Gaming Image" class="cloud-gaming-image">
-                    </div>
-                    <div class="col-md-6">
-                        <h2>What is Cloud Gaming?</h2>
-                        <ul class="bullet-points">
-                            <li>
-                                <i class="fas fa-check"></i>
-                                No need to download or install games
-                            </li>
-                            <li>
-                                <i class="fas fa-check"></i>
-                                Play games directly on your browser
-                            </li>
-                            <li>
-                                <i class="fas fa-check"></i>
-                                Requires a broadband connection of 20Mbps or more
-                            </li>
-                        </ul>
-                    </div>
+    </div>
+    
+    
+
+    <h3 class="section-heading">Features</h3>
+
+    <div class="container features">
+        <div class="feature animate__animated animate__fadeInUp">
+            <p><i class="bi bi-controller"></i></p>
+            <h4>Access to Hundreds of Games</h4>
+            <p>Choose from a vast library of games, from AAA titles to indie gems.</p>
+        </div>
+
+        <div class="feature animate__animated animate__fadeInUp">
+            <p><i class="bi bi-tablet"></i></p>
+            <h4>Play on Any Device</h4>
+            <p>Stream games on your PC, laptop, tablet, or even your smartphone.</p>
+        </div>
+
+        <div class="feature animate__animated animate__fadeInUp">
+            <p><i class="bi bi-cloud-arrow-down"></i></p>
+            <h4>No Downloads or Updates Required</h4>
+            <p>Play games instantly without the need for downloads or updates.</p>
+        </div>
+    </div>
+
+    <h3 class="section-heading">Featured Games</h3>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 animate__animated animate__fadeInUp">
+                <div class="game">
+                    <img class="game-image" src="./images/game1.jpg" alt="Game 1">
+                    <h4 class="game-title">Game 1</h4>
+                    <p class="game-description">Some description about Game 1</p>
                 </div>
             </div>
-        </section>
-        <section class="features-section">
-            <div class="container">
-                <div class="row feature-grid">
-                    <div class="col-md-4">
-                        <div class="feature-item">
-                            <i class="fa fa-gamepad fa-3x"></i>
-                            <h3>Access to Hundreds of Games</h3>
-                            <p>Choose from a vast library of games, from AAA titles to indie gems.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="feature-item">
-                            <i class="fa fa-laptop fa-3x"></i>
-                            <h3>Play on Any Device</h3>
-                            <p>Stream games on your PC, laptop, tablet, or even your smartphone.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="feature-item">
-                            <i class="far fa-clock fa-3x"></i>
-                            <h3>No Downloads or Updates Required</h3>
-                            <p>Play games instantly without the need for downloads or updates.</p>
-                        </div>
-                    </div>
+            <div class="col-md-4 animate__animated animate__fadeInUp">
+                <div class="game">
+                    <img class="game-image" src="./images/game2.jpg" alt="Game 2">
+                    <h4 class="game-title">Game 2</h4>
+                    <p class="game-description">Some description about Game 2</p>
                 </div>
             </div>
-        </section>
-        <section class="games-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h2>Featured Games</h2>
-                    </div>
-                </div>
-                <div class="row game-grid">
-                    <div class="col-md-4">
-                        <div class="game-item">
-                            <img src="./images/game1.jpg" alt="Game 1">
-                            <h3>Assassin's Creed Valhalla</h3>
-                            <p>Join the Viking invasion of England in this action-packed adventure.</p>
-                            <a href="#" class="btn btn-primary">Play Now</a>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="game-item">
-                            <img src="./images/game2.jpg" alt="Game 2">
-                            <h3>Cyberpunk 2077</h3>
-                            <p>Explore the dystopian future of Night City in this sci-fi RPG.</p>
-                            <a href="#" class="btn btn-primary">Play Now</a>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="game-item">
-                            <img src="./images/game3.jpg" alt="Game 3">
-                            <h3>Hades</h3>
-                            <p>Battle your way through the underworld in this critically acclaimed indie game.</p>
-                            <a href="#" class="btn btn-primary">Play Now</a>
-                        </div>
-                    </div>
+            <div class="col-md-4 animate__animated animate__fadeInUp">
+                <div class="game">
+                    <img class="game-image" src="./images/game3.jpg" alt="Game 3">
+                    <h4 class="game-title">Game 3</h4>
+                    <p class="game-description">Some description about Game 3</p>
                 </div>
             </div>
-        </section>
-        <section class="how-it-works-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h2>How It Works</h2>
-                        <p>We run the games & you stream it.</p>
-                        <ul class="bullet-points">
-                            <li>
-                                <i class="far fa-clock"></i>
-                                The games are installed on our servers
-                            </li>
-                            <li>
-                                <i class="fas fa-desktop"></i>
-                                We stream the video to your device
-                            </li>
-                            <li>
-                                <i class="far fa-paper-plane"></i>
-                                You control the game via our service
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="footer-txt">
-                        <p>&copy; 2023 SkyPlay Cloud Gaming Platform. All rights reserved.</p>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.1/dist/umd/popper-base.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+JvoWRt8bHjLQ9gXJ6l27QIXt2Z+Uu" crossorigin="anonymous"></script>
-        <script src="./js/navbar.js"></script>
-    </body>
+        </div>
+    </div>
+
+    
+
+    
+
+    <div class="footer">
+        <p>&copy; 2023 SkyPlay. All rights reserved.</p>
+    </div>
+
+    
+    
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
