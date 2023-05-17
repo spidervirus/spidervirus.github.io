@@ -1,0 +1,36 @@
+{
+  "extends": [
+    "development"
+  ],
+  "hints": {
+    "axe/forms": [
+      "default",
+      {
+        "label": "off"
+      }
+    ],
+    "compat-api/css": [
+      "default",
+      {
+        "ignore": [
+          "user-select",
+          "backdrop-filter",
+          "backdrop-filter"
+        ]
+      }
+    ],
+    "no-inline-styles": "off"
+  },
+  "browserslist": [
+    "defaults",
+    "not ie 11",
+    "not and_ff <= 110",
+    "not firefox <= 112",
+    "not and_ff <= 110",
+    "not firefox <= 112",
+    "not and_ff <= 110",
+    "not firefox <= 112",
+    "not and_ff <= 110",
+    "not firefox <= 112"
+  ]
+}
