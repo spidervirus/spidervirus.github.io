@@ -415,41 +415,64 @@ hr {
   color: #bfbfbf;
 }
 
+/* Centered Contact Form and Fields within Contact Section */
+
 .contact-section {
   background-color: #131313;
   color: #ffffff;
   padding: 80px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
-
-
 .contact-form {
-  margin-bottom: 40px;
+  max-width: 500px;
+  width: 100%;
+  padding: 20px;
+  background-color: rgba(38, 38, 38, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(243, 220, 12, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .contact-form form {
   display: grid;
-  grid-template-columns: 1fr;
   grid-gap: 20px;
+  width: 100%;
+  align-items: center;
 }
 
 .contact-form .form-group {
   display: flex;
   flex-direction: column;
+  align-items: center; /* Center the form fields horizontally */
 }
 
 .contact-form label {
   font-size: 18px;
   margin-bottom: 8px;
+  color: #f3dc0c;
+  text-align: center; /* Center the label text */
 }
 
 .contact-form input,
 .contact-form textarea {
-  padding: 10px;
+  padding: 12px;
   border: none;
   border-radius: 5px;
   background-color: #262626;
   color: #ffffff;
   box-shadow: 0 0 5px rgba(243, 220, 12, 0.5);
+  width: 100%;
+  text-align: center; /* Center the input and textarea text */
+}
+
+.contact-form textarea {
+  min-height: 150px;
 }
 
 .contact-form button {
@@ -461,6 +484,7 @@ hr {
   font-size: 20px;
   cursor: pointer;
   transition: transform 0.3s;
+  width: 100%;
 }
 
 .contact-form button:hover {
@@ -470,6 +494,8 @@ hr {
 .contact-details {
   font-size: 18px;
   line-height: 1.6;
+  text-align: center;
+  margin-top: 40px;
 }
 
 .contact-details h3 {
@@ -479,6 +505,7 @@ hr {
 
 .contact-details p {
   color: #ffffff;
+  margin-bottom: 10px;
 }
 
 .contact-details a {
@@ -491,6 +518,7 @@ hr {
   color: #ffffff;
 }
 
+
 html {
   scroll-behavior: smooth;
 }
@@ -500,18 +528,14 @@ html {
     <div class="header">
         <h1 class="neon-text"><i class="bi bi-lightning"></i> SkyPlay</h1>
     <ul class="nav-bar">
-      <div class="toc">
-        <ul>
-            <li><a href="#intro">Intro</a></li>
-            <li><a href="#what-is-cloud-gaming">What is Cloud Gaming?</a></li>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#featured-games">Featured Games</a></li>
-            <li><a href="#pricing">Pricing</a></li>
-            <li><a href="#faq">FAQ</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#contact">Contact Us</a></li>
-        </ul>
-        </div>
+    <li><a href="#pricing" class="neon-text smooth-scroll"><i class="bi bi-cash"></i> Pricing</a></li>
+    <li><a href="#faq" class="neon-text smooth-scroll"><i class="bi bi-question-circle"></i> FAQ</a></li>
+    <li><a href="#about" class="neon-text smooth-scroll"><i class="bi bi-info-circle"></i> About</a></li>
+    <li><a href="#contact" class="neon-text smooth-scroll"><i class="bi bi-envelope"></i> Contact</a></li>
+    <li><a href="login.php" class="neon-text smooth-scroll"><i class="bi bi-person-circle"></i> Login</a></li>
+    <li><a href="signup.php" class="neon-text smooth-scroll"><i class="bi bi-person-circle"></i> Sign Up</a></li>
+  </ul>
+      </div>
     <div class="cta">
         <video autoplay loop muted class="background-video">
             <source src="./images/intro.webm" type="video/mp4">
@@ -697,6 +721,7 @@ html {
       <section id="contact" class="contact-section">
         <div class="container">
           <h2>Contact Us</h2>
+          <br>
           <div class="contact-form">
             <form id="contact-form">
               <div class="form-group">
