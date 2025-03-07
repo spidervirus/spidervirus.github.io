@@ -525,3 +525,54 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+.skill-stats {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: var(--bg-color);
+    border-radius: 0.5rem;
+}
+
+.stat-counter {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.skill-progress {
+    width: 100%;
+    height: 8px;
+    background-color: var(--bg-color);
+    border-radius: 4px;
+    margin-top: 0.5rem;
+    overflow: hidden;
+}
+
+.progress-bar {
+    width: 0;
+    height: 100%;
+    background-color: var(--primary-color);
+    transition: width 1s ease-out;
+}
+
+.skill-category li {
+    margin-bottom: 1rem;
+}
+
+.skill-category li span {
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+@keyframes countUp {
+    from {
+        opacity: 0;
+        transform: translateY(1rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

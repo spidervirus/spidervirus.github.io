@@ -47,54 +47,36 @@ function handleImageLoad(img) {
     img.parentElement.classList.remove('loading');
 }
 
-// Project data
-const projects = [
-    {
-        title: 'Snake Game',
-        description: 'A modern implementation of the classic Snake game with exciting power-ups, multiple difficulty levels, and high score tracking.',
-        image: 'assets/projects/cyber-learning.jpg',
-        github: 'https://github.com/spidervirus/Snake-Game'
-    },
-    {
-        title: 'To-Do List',
-        description: 'A feature-rich, modern to-do list web application with task categorization, priority levels, due dates, and dark mode support.',
-        image: 'assets/projects/network-monitor.jpg',
-        github: 'https://github.com/spidervirus/To-Do-List'
-    },
-    {
-        title: 'Remote-Work Tool ',
-        description: 'A modern web application built with Next.js for managing remote work, including projects, tasks, and team communication.',
-        image: 'assets/projects/code-review.jpg',
-        github: 'https://github.com/spidervirus/remote-work'
-    },
-];
-
-// Render project cards
-const projectsGrid = document.querySelector('.projects-grid');
-
-projects.forEach(project => {
-    const projectCard = document.createElement('div');
-    projectCard.className = 'project-card';
-    
-    projectCard.innerHTML = `
-        <div class="project-image-container loading">
-            <img src="${project.image}" 
-                alt="${project.title}" 
-                class="project-image" 
-                style="opacity: 0; transition: opacity 0.5s ease-in-out"
-                onload="handleImageLoad(this)">
-            <div class="loading-spinner"></div>
-        </div>
-        <div class="project-info">
-            <h3>${project.title}</h3>
-            <p>${project.description}</p>
-            <a href="${project.github}" target="_blank" rel="noopener noreferrer" class="cta-button">
-                <i class="fab fa-github"></i> View on GitHub
-            </a>
-        </div>
-    `;
-    
-    projectsGrid.appendChild(projectCard);
+// Initialize skill counters when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    const skillCategories = document.querySelectorAll('.skill-category');
+    skillCategories.forEach(category => {
+        const counter = category.querySelector('.stat-counter');
+        if (counter) {
+            const target = parseInt(counter.getAttribute('data-target'));
+            counter.textContent = '0';
+            
+            const duration = 2000;
+            const startTime = performance.now();
+            
+            function updateCounter(currentTime) {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                
+                const easeProgress = 1 - (1 - progress) * (1 - progress);
+                const currentNumber = Math.round(easeProgress * target);
+                counter.textContent = currentNumber;
+                
+                if (progress < 1) {
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    counter.textContent = target;
+                }
+            }
+            
+            requestAnimationFrame(updateCounter);
+        }
+    });
 });
 
 // Contact form validation
