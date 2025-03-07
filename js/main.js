@@ -38,22 +38,28 @@ document.addEventListener('click', (e) => {
 // Project data
 const projects = [
     {
-        title: 'Secure Chat Application',
-        description: 'End-to-end encrypted chat application built with WebSocket and AES encryption.',
-        image: 'assets/projects/chat-app.jpg',
-        github: 'https://github.com/yourusername/secure-chat'
+        title: 'Cybersecurity Learning Platform',
+        description: 'Interactive platform for learning cybersecurity concepts, featuring hands-on labs and CTF challenges.',
+        image: 'assets/projects/cyber-learning.jpg',
+        github: 'https://github.com/spidervirus/cyber-learning-platform'
     },
     {
-        title: 'Network Traffic Analyzer',
-        description: 'Python-based tool for analyzing and visualizing network traffic patterns.',
-        image: 'assets/projects/traffic-analyzer.jpg',
-        github: 'https://github.com/yourusername/traffic-analyzer'
+        title: 'Network Security Monitor',
+        description: 'Real-time network traffic analysis tool with intrusion detection capabilities and threat visualization.',
+        image: 'assets/projects/network-monitor.jpg',
+        github: 'https://github.com/spidervirus/network-security-monitor'
     },
     {
-        title: 'Web Security Scanner',
-        description: 'Automated vulnerability scanner for web applications.',
-        image: 'assets/projects/security-scanner.jpg',
-        github: 'https://github.com/yourusername/security-scanner'
+        title: 'Secure Code Review Tool',
+        description: 'Automated tool for identifying security vulnerabilities in source code using static analysis.',
+        image: 'assets/projects/code-review.jpg',
+        github: 'https://github.com/spidervirus/secure-code-review'
+    },
+    {
+        title: 'Incident Response Framework',
+        description: 'Comprehensive framework for managing and responding to security incidents with automated workflows.',
+        image: 'assets/projects/incident-response.jpg',
+        github: 'https://github.com/spidervirus/incident-response'
     }
 ];
 
