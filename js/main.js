@@ -47,37 +47,7 @@ function handleImageLoad(img) {
     img.parentElement.classList.remove('loading');
 }
 
-// Initialize skill counters when DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
-    const skillCategories = document.querySelectorAll('.skill-category');
-    skillCategories.forEach(category => {
-        const counter = category.querySelector('.stat-counter');
-        if (counter) {
-            const target = parseInt(counter.getAttribute('data-target'));
-            counter.textContent = '0';
-            
-            const duration = 2000;
-            const startTime = performance.now();
-            
-            function updateCounter(currentTime) {
-                const elapsed = currentTime - startTime;
-                const progress = Math.min(elapsed / duration, 1);
-                
-                const easeProgress = 1 - (1 - progress) * (1 - progress);
-                const currentNumber = Math.round(easeProgress * target);
-                counter.textContent = currentNumber;
-                
-                if (progress < 1) {
-                    requestAnimationFrame(updateCounter);
-                } else {
-                    counter.textContent = target;
-                }
-            }
-            
-            requestAnimationFrame(updateCounter);
-        }
-    });
-});
+
 
 // Contact form validation
 const contactForm = document.getElementById('contactForm');

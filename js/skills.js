@@ -7,34 +7,6 @@ function animateProgressBars() {
     });
 }
 
-// Function to animate stat counters
-function animateCounters(category) {
-    const counter = category.querySelector('.stat-counter');
-    if (!counter) return;
-    
-    const target = parseInt(counter.getAttribute('data-target'));
-    const duration = 2000; // Animation duration in milliseconds
-    const startTime = performance.now();
-    
-    function updateCounter(currentTime) {
-        const elapsed = currentTime - startTime;
-        const progress = Math.min(elapsed / duration, 1);
-        
-        // Use easeOutQuad for smoother animation
-        const easeProgress = 1 - (1 - progress) * (1 - progress);
-        const currentNumber = Math.round(easeProgress * target);
-        counter.textContent = currentNumber;
-        
-        if (progress < 1) {
-            requestAnimationFrame(updateCounter);
-        } else {
-            counter.textContent = target;
-        }
-    }
-    
-    requestAnimationFrame(updateCounter);
-}
-
 // Intersection Observer for triggering animations
 const observerOptions = {
     root: null,
@@ -57,9 +29,6 @@ const skillObserver = new IntersectionObserver((entries) => {
                 const progress = bar.getAttribute('data-progress');
                 bar.style.width = `${progress}%`;
             });
-            
-            // Animate counter in this category
-            animateCounters(entry.target);
             
             // Unobserve after animation
             skillObserver.unobserve(entry.target);
