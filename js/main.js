@@ -97,23 +97,6 @@ projects.forEach(project => {
     projectsGrid.appendChild(projectCard);
 });
 
-// Intersection Observer for scroll animations
-const animateElements = document.querySelectorAll('.animate-fade-in');
-
-const observer = new IntersectionObserver(
-    (entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.animation = 'fadeIn 1s ease forwards';
-                observer.unobserve(entry.target);
-            }
-        });
-    },
-    { threshold: 0.1 }
-);
-
-animateElements.forEach(element => observer.observe(element));
-
 // Contact form validation
 const contactForm = document.getElementById('contactForm');
 
