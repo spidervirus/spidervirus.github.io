@@ -38,29 +38,23 @@ document.addEventListener('click', (e) => {
 // Project data
 const projects = [
     {
-        title: 'Cybersecurity Learning Platform',
-        description: 'Interactive platform for learning cybersecurity concepts, featuring hands-on labs and CTF challenges.',
+        title: 'Snake Game',
+        description: 'A modern implementation of the classic Snake game with exciting power-ups, multiple difficulty levels, and high score tracking.',
         image: 'assets/projects/cyber-learning.jpg',
-        github: 'https://github.com/spidervirus/cyber-learning-platform'
+        github: 'https://github.com/spidervirus/Snake-Game'
     },
     {
-        title: 'Network Security Monitor',
-        description: 'Real-time network traffic analysis tool with intrusion detection capabilities and threat visualization.',
+        title: 'To-Do List',
+        description: 'A feature-rich, modern to-do list web application with task categorization, priority levels, due dates, and dark mode support.',
         image: 'assets/projects/network-monitor.jpg',
-        github: 'https://github.com/spidervirus/network-security-monitor'
+        github: 'https://github.com/spidervirus/To-Do-List'
     },
     {
-        title: 'Secure Code Review Tool',
-        description: 'Automated tool for identifying security vulnerabilities in source code using static analysis.',
+        title: 'Remote-Work Tool ',
+        description: 'A modern web application built with Next.js for managing remote work, including projects, tasks, and team communication.',
         image: 'assets/projects/code-review.jpg',
-        github: 'https://github.com/spidervirus/secure-code-review'
+        github: 'https://github.com/spidervirus/remote-work'
     },
-    {
-        title: 'Incident Response Framework',
-        description: 'Comprehensive framework for managing and responding to security incidents with automated workflows.',
-        image: 'assets/projects/incident-response.jpg',
-        github: 'https://github.com/spidervirus/incident-response'
-    }
 ];
 
 // Render project cards
