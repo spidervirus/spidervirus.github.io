@@ -1,3 +1,19 @@
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInFromLeft {
+    from { opacity: 0; transform: translateX(-30px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInFromRight {
+    from { opacity: 0; transform: translateX(30px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
 /* Base styles and CSS variables */
 :root {
     --primary-color: #2563eb;
@@ -100,6 +116,24 @@ body {
 
 .hero-content {
     max-width: 800px;
+    animation: fadeIn 1s ease-out;
+}
+
+.hero-content > * {
+    opacity: 0;
+    animation: slideInFromLeft 0.8s ease-out forwards;
+}
+
+.hero-content h1 {
+    animation-delay: 0.2s;
+}
+
+.hero-content p {
+    animation-delay: 0.4s;
+}
+
+.hero-content .cta-button {
+    animation-delay: 0.6s;
 }
 
 .hero h1 {
@@ -145,6 +179,18 @@ body {
     padding: 2rem;
     border-radius: 0.5rem;
     box-shadow: 0 2px 4px var(--shadow-color);
+    transition: var(--transition);
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.skill-category.animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+.skill-category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px var(--shadow-color);
 }
 
 .skill-category h3 {
@@ -187,21 +233,77 @@ body {
     overflow: hidden;
     box-shadow: 0 2px 4px var(--shadow-color);
     transition: var(--transition);
+    position: relative;
+    cursor: pointer;
 }
 
 .project-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 8px var(--shadow-color);
+    box-shadow: 0 8px 16px var(--shadow-color);
 }
 
-.project-image {
+.project-image-container {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.project-image-container.loading {
+    background-color: var(--card-bg);
+}
+
+.loading-spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    border: 3px solid var(--border-color);
+    border-top-color: var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.project-card .project-image {
     width: 100%;
     height: 200px;
     object-fit: cover;
+    transition: var(--transition);
+}
+
+.project-card:hover .project-image {
+    transform: scale(1.05);
 }
 
 .project-info {
     padding: 1.5rem;
+    transition: var(--transition);
+}
+
+.project-card:hover .project-info {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.project-card:hover .project-info h3 {
+    color: white;
+}
+
+.project-card .cta-button {
+    margin-top: 1rem;
+    background-color: var(--primary-color);
+    opacity: 0.9;
+}
+
+.project-card:hover .cta-button {
+    background-color: white;
+    color: var(--primary-color);
 }
 
 /* Contact Section */

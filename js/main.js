@@ -9,7 +9,13 @@ if (localStorage.getItem('darkMode') === 'enabled') {
 }
 
 darkModeToggle.addEventListener('click', () => {
+    document.documentElement.style.setProperty('--transition', 'none');
     body.classList.toggle('dark-mode');
+    
+    // Re-enable transitions after the dark mode switch
+    setTimeout(() => {
+        document.documentElement.style.setProperty('--transition', 'all 0.3s ease');
+    }, 50);
     
     if (body.classList.contains('dark-mode')) {
         localStorage.setItem('darkMode', 'enabled');
@@ -34,6 +40,12 @@ document.addEventListener('click', (e) => {
         navMenu.classList.remove('active');
     }
 });
+
+// Add loading state for images
+function handleImageLoad(img) {
+    img.style.opacity = '1';
+    img.parentElement.classList.remove('loading');
+}
 
 // Project data
 const projects = [
@@ -65,7 +77,14 @@ projects.forEach(project => {
     projectCard.className = 'project-card';
     
     projectCard.innerHTML = `
-        <img src="${project.image}" alt="${project.title}" class="project-image">
+        <div class="project-image-container loading">
+            <img src="${project.image}" 
+                alt="${project.title}" 
+                class="project-image" 
+                style="opacity: 0; transition: opacity 0.5s ease-in-out"
+                onload="handleImageLoad(this)">
+            <div class="loading-spinner"></div>
+        </div>
         <div class="project-info">
             <h3>${project.title}</h3>
             <p>${project.description}</p>
@@ -77,6 +96,23 @@ projects.forEach(project => {
     
     projectsGrid.appendChild(projectCard);
 });
+
+// Intersection Observer for scroll animations
+const animateElements = document.querySelectorAll('.animate-fade-in');
+
+const observer = new IntersectionObserver(
+    (entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.animation = 'fadeIn 1s ease forwards';
+                observer.unobserve(entry.target);
+            }
+        });
+    },
+    { threshold: 0.1 }
+);
+
+animateElements.forEach(element => observer.observe(element));
 
 // Contact form validation
 const contactForm = document.getElementById('contactForm');
