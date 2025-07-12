@@ -6,8 +6,11 @@
     <title>Aman Ali - Portfolio</title>
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div id="matrix-bg"></div>
+    <div id="cyber-cursor"></div>
     <nav class="navbar">
         <div class="nav-brand">Aman Ali</div>
         <div class="nav-toggle" id="navToggle">
@@ -17,9 +20,15 @@
         </div>
         <ul class="nav-menu" id="navMenu">
             <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
+            <li>
+                <button id="themeSwitcher" class="theme-switcher" title="Switch Theme">
+                    <i class="fas fa-palette"></i>
+                </button>
+            </li>
             <li>
                 <button id="darkModeToggle" class="dark-mode-toggle">
                     <i class="fas fa-moon"></i>
@@ -31,8 +40,24 @@
     <section id="home" class="hero">
         <div class="hero-content">
             <h1 class="animate-fade-in">Aman Ali</h1>
+            <span id="typed-intro"></span>
             <p class="animate-fade-in">Full Stack Developer & Cybersecurity Specialist passionate about securing web applications and optimizing IT infrastructure.</p>
             <a href="assets/resume.pdf" class="cta-button animate-fade-in" download>Download Resume</a>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="about-container">
+            <div class="about-photo">
+                <div class="about-svg-border">
+                    <!-- SVG border will be injected by JS -->
+                    <img src="assets/profile.jpg" alt="Aman Ali Photo">
+                </div>
+            </div>
+            <div class="about-bio">
+                <h2>About Me</h2>
+                <p>Hi, I'm Aman Ali, a passionate Full Stack Developer and Cybersecurity Specialist based in Dubai. I love building secure, high-performance web applications and helping businesses thrive in the digital world. With experience across tech, security, and business operations, I bring a unique perspective to every project.</p>
+            </div>
         </div>
     </section>
 
@@ -167,78 +192,93 @@
         </div>
 
         <div class="experience-timeline">
-            <h3>Work Experience</h3>
+            <h2>Professional Experience</h2>
             <div class="timeline">
                 <div class="timeline-item animate-fade-in">
                     <div class="timeline-content">
-                        <h4>Security Specialist</h4>
-                        <h5>Zinger</h5>
-                        <p class="timeline-date">June 2021 - Oct 2021</p>
+                        <span class="timeline-icon"><i class="fas fa-utensils"></i></span>
+                        <h4 class="neon-company">YOUFiSH2GO RESTAURANT</h4>
+                        <h5 class="neon-role">Restaurant Manager</h5>
+                        <p class="timeline-date">Dubai | Nov 2023 – Present</p>
                         <ul>
-                            <li>Conducted penetration testing and security audits</li>
-                            <li>Reduced data breach risks by 30%</li>
-                            <li>Secured web applications against OWASP Top 10 vulnerabilities</li>
+                            <li>Oversee daily restaurant operations, ensuring high standards of service, food quality, and cleanliness.</li>
+                            <li>Train staff to provide excellent customer service and maintain efficiency.</li>
+                            <li>Monitor financial performance to achieve business targets.</li>
+                            <li>Implement marketing strategies to increase revenue.</li>
                         </ul>
                     </div>
                 </div>
                 <div class="timeline-item animate-fade-in">
                     <div class="timeline-content">
-                        <h4>Freelance IT Consultant</h4>
-                        <h5>Dubai, UAE</h5>
-                        <p class="timeline-date">Jan 2022 - Dec 2024</p>
+                        <span class="timeline-icon"><i class="fas fa-user-tie"></i></span>
+                        <h4 class="neon-company">FREELANCE</h4>
+                        <h5 class="neon-role">Freelance Public Relation Officer</h5>
+                        <p class="timeline-date">Dubai | Jan 2022 – Dec 2024</p>
                         <ul>
-                            <li>Designed document tracking systems, reducing processing time by 20%</li>
-                            <li>Provided IT support and optimized software performance</li>
-                            <li>Managed digital platforms for secure coordination with government agencies</li>
+                            <li>Managed government document services including new license openings and visa applications.</li>
+                            <li>Coordinated with government agencies to ensure timely processing of documents.</li>
                         </ul>
                     </div>
                 </div>
                 <div class="timeline-item animate-fade-in">
                     <div class="timeline-content">
-                        <h4>Account Manager</h4>
-                        <h5>Fone G Communications L.L.C</h5>
-                        <p class="timeline-date">Nov 2022 - Apr 2023</p>
+                        <span class="timeline-icon"><i class="fas fa-chart-line"></i></span>
+                        <h4 class="neon-company">FONE G COMMUNiCATiONS L.L.C</h4>
+                        <h5 class="neon-role">Account Manager</h5>
+                        <p class="timeline-date">Al Barsha | Nov 2022 – Apr 2023</p>
                         <ul>
-                            <li>Managed accounts with CRM software, increasing client retention by 15%</li>
-                            <li>Resolved 95% of technical inquiries within 24 hours</li>
-                            <li>Applied data analytics to boost sales revenue by 10%</li>
+                            <li>Boosted client retention by 15% through CRM‑based issue resolution.</li>
+                            <li>Resolved 95% of technical inquiries within 24 hours.</li>
+                            <li>Applied data analytics to increase sales revenue by 10%.</li>
                         </ul>
                     </div>
                 </div>
                 <div class="timeline-item animate-fade-in">
                     <div class="timeline-content">
-                        <h4>Sales Associate</h4>
-                        <h5>Threads Styling</h5>
-                        <p class="timeline-date">Sep 2021 - Oct 2021</p>
+                        <span class="timeline-icon"><i class="fas fa-tags"></i></span>
+                        <h4 class="neon-company">THREADS STYLiNG</h4>
+                        <h5 class="neon-role">Sales Associate</h5>
+                        <p class="timeline-date">UAE | Sep 2021 – Oct 2021</p>
                         <ul>
-                            <li>Processed transactions via POS systems securely</li>
-                            <li>Improved stock tracking efficiency by 15% with inventory management</li>
+                            <li>Processed transactions securely via POS systems.</li>
+                            <li>Improved stock tracking efficiency by 15%.</li>
                         </ul>
                     </div>
                 </div>
                 <div class="timeline-item animate-fade-in">
                     <div class="timeline-content">
-                        <h4>Warehouse Assistant</h4>
-                        <h5>CEVA Logistics</h5>
-                        <p class="timeline-date">May 2021 - June 2021</p>
+                        <span class="timeline-icon"><i class="fas fa-shield-alt"></i></span>
+                        <h4 class="neon-company">ZiNGER</h4>
+                        <h5 class="neon-role">Security Specialist</h5>
+                        <p class="timeline-date">Jun 2021 – Oct 2021</p>
                         <ul>
-                            <li>Streamlined stock organization, reducing errors by 12%</li>
-                            <li>Maintained 100% accuracy in digital stock records</li>
-                        </ul>
-                    </div>
-                </div>
+                            <li>Conducted penetration testing and security audits.</li>
+                            <li>Implemented protocols to reduce data breach risks by 30%.</li>
+                            <li>Secured web applications from OWASP Top 10 vulnerabilities.</li>
                         </ul>
                     </div>
                 </div>
                 <div class="timeline-item animate-fade-in">
                     <div class="timeline-content">
-                        <h4>Junior Security Engineer</h4>
-                        <h5>CyberGuard Systems</h5>
-                        <p class="timeline-date">2018 - 2019</p>
+                        <span class="timeline-icon"><i class="fas fa-boxes"></i></span>
+                        <h4 class="neon-company">CEVA LOGiSTiCS</h4>
+                        <h5 class="neon-role">Warehouse Assistant</h5>
+                        <p class="timeline-date">May 2021 – Jun 2021</p>
                         <ul>
-                            <li>Conducted security audits and vulnerability assessments</li>
-                            <li>Assisted in implementing security tools and monitoring systems</li>
-                            <li>Participated in incident response and threat hunting activities</li>
+                            <li>Used inventory software to reduce errors by 12%.</li>
+                            <li>Maintained 100% accuracy in stock records.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item animate-fade-in">
+                    <div class="timeline-content">
+                        <span class="timeline-icon"><i class="fas fa-calculator"></i></span>
+                        <h4 class="neon-company">BRiGHT AL KHALEEJ GENERAL TRADiNG</h4>
+                        <h5 class="neon-role">Accountant</h5>
+                        <p class="timeline-date">Dubai | May 2019 – Jul 2020</p>
+                        <ul>
+                            <li>Prepared and analyzed financial statements.</li>
+                            <li>Managed accounts payable and receivable.</li>
                         </ul>
                     </div>
                 </div>
@@ -287,7 +327,12 @@
     <footer class="footer">
         <p>&copy; 2024 Aman Ali. All rights reserved.</p>
     </footer>
+    <div id="cyber-svg-animations"></div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="js/cyberpunk.js"></script>
     <script src="js/animations.js"></script>
     <script src="js/main.js"></script>
     <script src="js/animations.js"></script>

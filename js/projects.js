@@ -33,7 +33,7 @@ function renderProjects() {
 
     projects.forEach(project => {
         const projectCard = document.createElement('div');
-        projectCard.className = 'project-card animate-fade-in';
+        projectCard.className = 'project-card holo-card animate-fade-in';
         
         projectCard.innerHTML = `
             <div class="project-image-container loading">
