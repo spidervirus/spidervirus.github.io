@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (copyBtn && copyToast) {
     copyBtn.addEventListener('click', () => {
-      const email = copyBtn.getAttribute('data-email') || '69119173+spidervirus@users.noreply.github.com';
+      const email = copyBtn.getAttribute('data-email') || 'amanmohammedali@outlook.com';
       navigator.clipboard.writeText(email).then(() => {
         copyToast.classList.add('show');
         setTimeout(() => {
