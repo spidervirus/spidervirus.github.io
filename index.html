@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aman Mohamed Ali — Full-Stack & AI Systems Developer</title>
+  <meta name="description" content="Portfolio of Aman Mohamed Ali. Full-stack & AI systems developer building autonomous agents, developer tooling, and cross-platform apps.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Ambient Background Glows -->
+  <div class="bg-glow-container">
+    <div class="glow-orb-1"></div>
+    <div class="glow-orb-2"></div>
+  </div>
+
+  <!-- Sticky Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-custom">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <span class="accent">&lt;</span>aman<span class="accent">/&gt;</span>
+      </a>
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navContent" aria-controls="navContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#opensource">Open Source</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+            <a href="https://github.com/spidervirus" target="_blank" rel="noopener noreferrer" class="btn btn-outline-glass btn-sm px-3">
+              <i class="bi bi-github me-1"></i> GitHub
+            </a>
+          </li>
+          <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+            <a href="#contact" class="btn btn-emerald btn-sm px-3">
+              Contact
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-7">
+          <div class="badge-status mb-3">
+            <span class="status-dot"></span> Available for Select Roles & Collaborations • Dubai, UAE
+          </div>
+          <h1 class="display-4 fw-bold text-gradient mb-3">
+            Engineering AI Agents, Developer Tools & High-Performance Systems.
+          </h1>
+          <p class="hero-description mb-4">
+            I'm <strong>Aman Mohamed Ali</strong>, a full-stack and systems developer with 3+ years of experience. I build autonomous agentic workflows, Model Context Protocol (MCP) servers, and scalable cloud & native tools in Rust, TypeScript, and Python.
+          </p>
+          <div class="d-flex flex-wrap gap-3">
+            <a href="#projects" class="btn btn-emerald">
+              <i class="bi bi-grid-fill me-2"></i> Explore Projects
+            </a>
+            <a href="https://www.linkedin.com/in/amanmohd/" target="_blank" rel="noopener noreferrer" class="btn btn-outline-glass">
+              <i class="bi bi-linkedin me-2"></i> Connect on LinkedIn
+            </a>
+          </div>
+        </div>
+
+        <!-- Terminal Widget -->
+        <div class="col-lg-5">
+          <div class="terminal-window">
+            <div class="terminal-header">
+              <span class="terminal-dot dot-red"></span>
+              <span class="terminal-dot dot-yellow"></span>
+              <span class="terminal-dot dot-green"></span>
+              <span class="terminal-title">aman@workstation:~</span>
+            </div>
+            <div class="terminal-body">
+              <div>
+                <span class="t-prompt">$</span> <span class="t-cmd">aman --status</span>
+              </div>
+              <div class="t-out mt-1">
+                Name: <span class="t-green">Aman Mohamed Ali</span><br>
+                Role: Full-Stack & AI Systems Developer<br>
+                Base: Dubai, United Arab Emirates<br>
+                Core: <span class="t-yellow">Rust, Python, TypeScript, React</span>
+              </div>
+              <div class="mt-3">
+                <span class="t-prompt">$</span> <span class="t-cmd" id="terminalCmd">aman.currentFocus</span><span class="status-dot d-inline-block ms-1"></span>
+              </div>
+              <div class="t-out mt-1">
+                => "Autonomous AI agents, developer tooling & open-source"
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats Bar -->
+      <div class="row mt-5 g-3">
+        <div class="col-6 col-md-3">
+          <div class="glass-card stat-box">
+            <div class="stat-number">3+</div>
+            <div class="stat-label">Years Experience</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="glass-card stat-box">
+            <div class="stat-number">6+</div>
+            <div class="stat-label">Original Projects</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="glass-card stat-box">
+            <div class="stat-number">Google</div>
+            <div class="stat-label">OSS Contributor</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="glass-card stat-box">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Open Source Dedicated</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Open Source Spotlight -->
+  <section id="opensource" class="py-5">
+    <div class="container">
+      <div class="spotlight-card">
+        <div class="row align-items-center g-4">
+          <div class="col-md-8">
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <span class="google-pill"><i class="bi bi-google"></i> Google Labs</span>
+              <span class="project-tag">Pull Request #114</span>
+            </div>
+            <h3 class="fw-bold text-white mb-2">Contributor to Google Stitch Skills</h3>
+            <p class="text-secondary mb-0">
+              Contributed to <strong>google-labs-code/stitch-skills</strong> — the official open-source agent skill framework for Google Stitch. Enhanced helper script reliability across automated agents, fixed directory creation handling, and added CLI flag support for canvas screen instances.
+            </p>
+          </div>
+          <div class="col-md-4 text-md-end">
+            <a href="https://github.com/google-labs-code/stitch-skills/pull/114" target="_blank" rel="noopener noreferrer" class="btn btn-emerald">
+              <i class="bi bi-git me-1"></i> View Pull Request
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Projects -->
+  <section id="projects" class="py-5">
+    <div class="container">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center mb-4 gap-3">
+        <div>
+          <h2 class="fw-bold text-white mb-1">Featured Projects</h2>
+          <p class="text-secondary mb-0">Original tools built to solve real engineering problems.</p>
+        </div>
+
+        <!-- Category Filters -->
+        <div class="d-flex flex-wrap gap-2">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="ai">AI & Agents</button>
+          <button class="filter-btn" data-filter="systems">Systems & Rust</button>
+          <button class="filter-btn" data-filter="tools">Developer Tools</button>
+        </div>
+      </div>
+
+      <div class="row g-4" id="projectGrid">
+
+        <!-- 1. Tunly -->
+        <div class="col-md-6 col-lg-4 project-col" data-category="systems tools">
+          <div class="glass-card project-card">
+            <div class="d-flex justify-content-between align-items-start mb-3">
+              <div class="lang-indicator">
+                <span class="lang-dot lang-rust"></span> Rust
+              </div>
+              <a href="https://github.com/spidervirus/Tunly" target="_blank" rel="noopener noreferrer" class="text-secondary hover-text-white">
+                <i class="bi bi-box-arrow-up-right fs-5"></i>
+              </a>
+            </div>
+            <h4 class="fw-bold text-white mb-2">Tunly</h4>
+            <p class="text-secondary small mb-3 flex-grow-1">
+              A modern, lightweight, self-hosted ngrok alternative written in Rust. Securely exposes local development servers to the internet via WebSocket tunneling with automatic Caddy TLS.
+            </p>
+            <div class="d-flex flex-wrap gap-1 mb-4">
+              <span class="project-tag">Rust</span>
+              <span class="project-tag">WebSockets</span>
+              <span class="project-tag">Reverse Proxy</span>
+              <span class="project-tag">Docker</span>
+            </div>
+            <a href="https://github.com/spidervirus/Tunly" target="_blank" rel="noopener noreferrer" class="btn btn-outline-glass btn-sm w-100">
+              <i class="bi bi-github me-1"></i> View Repository
+            </a>
+          </div>
+        </div>
+
+        <!-- 2. styleprobe -->
+        <div class="col-md-6 col-lg-4 project-col" data-category="ai tools">
+          <div class="glass-card project-card">
+            <div class="d-flex justify-content-between align-items-start mb-3">
+              <div class="lang-indicator">
+                <span class="lang-dot lang-ts"></span> TypeScript
+              </div>
+              <a href="https://github.com/spidervirus/styleprobe" target="_blank" rel="noopener noreferrer" class="text-secondary hover-text-white">
+                <i class="bi bi-box-arrow-up-right fs-5"></i>
+              </a>
+            </div>
+            <h4 class="fw-bold text-white mb-2">styleprobe</h4>
+            <p class="text-secondary small mb-3 flex-grow-1">
+              Extracts complete design systems, color tokens, typography scales, and CSS variables from any live URL for AI coding agents and MCP clients.
+            </p>
+            <div class="d-flex flex-wrap gap-1 mb-4">
+              <span class="project-tag">TypeScript</span>
+              <span class="project-tag">Design Tokens</span>
+              <span class="project-tag">AI Agents</span>
+              <span class="project-tag">MCP</span>
+            </div>
+            <a href="https://github.com/spidervirus/styleprobe" target="_blank" rel="noopener noreferrer" class="btn btn-outline-glass btn-sm w-100">
+              <i class="bi bi-github me-1"></i> View Repository
+            </a>
+          </div>
+        </div>
+
+        <!-- 3. ResearchAgent -->
+        <div class="col-md-6 col-lg-4 project-col" data-category="ai">
+          <div class="glass-card project-card">
+            <div class="d-flex justify-content-between align-items-start mb-3">
+              <div class="lang-indicator">
+                <span class="lang-dot lang-python"></span> Python
+              </div>
+              <a href="https://github.com/spidervirus/ResearchAgent" target="_blank" rel="noopener noreferrer" class="text-secondary hover-text-white">
+                <i class="bi bi-box-arrow-up-right fs-5"></i>
+              </a>
+            </div>
+            <h4 class="fw-bold text-white mb-2">ResearchAgent</h4>
+            <p class="text-secondary small mb-3 flex-grow-1">
+              A clean, focused open-source AI research agent with explicit planning, dynamic tool execution, multi-source verification, and calibrated confidence scoring.
+            </p>
+            <div class="d-flex flex-wrap gap-1 mb-4">
+              <span class="project-tag">Python</span>
+              <span class="project-tag">Autonomous Agents</span>
+              <span class="project-tag">LLM</span>
+              <span class="project-tag">Tool Use</span>
+            </div>
+            <a href="https://github.com/spidervirus/ResearchAgent" target="_blank" rel="noopener noreferrer" class="btn btn-outline-glass btn-sm w-100">
+              <i class="bi bi-github me-1"></i> View Repository
+            </a>
+          </div>
+        </div>
+
+        <!-- 4. gitblame-ai -->
+        <div class="col-md-6 col-lg-4 project-col" data-category="ai tools">
+          <div class="glass-card project-card">
+            <div class="d-flex justify-content-between align-items-start mb-3">
+              <div class="lang-indicator">
+                <span class="lang-dot lang-python"></span> Python
+              </div>
+              <a href="https://github.com/spidervirus/gitblame-ai" target="_blank" rel="noopener noreferrer" class="text-secondary hover-text-white">
+                <i class="bi bi-box-arrow-up-right fs-5"></i>
+              </a>
+            </div>
+            <h4 class="fw-bold text-white mb-2">gitblame-ai</h4>
+            <p class="text-secondary small mb-3 flex-grow-1">
+              AI-powered CLI code critique tool. Leverages Claude AI to identify suspicious git commits, analyze code patterns, and deliver brutally honest peer reviews.
+            </p>
+            <div class="d-flex flex-wrap gap-1 mb-4">
+              <span class="project-tag">Python</span>
+              <span class="project-tag">Claude AI</span>
+              <span class="project-tag">CLI</span>
+              <span class="project-tag">Git</span>
+            </div>
+            <a href="https://github.com/spidervirus/gitblame-ai" target="_blank" rel="noopener noreferrer" class="btn btn-outline-glass btn-sm w-100">
+              <i class="bi bi-github me-1"></i> View Repository
+            </a>
+          </div>
+        </div>
+
+        <!-- 5. SheetGate -->
+        <div class="col-md-6 col-lg-4 project-col" data-category="ai tools">
+          <div class="glass-card project-card">
+            <div class="d-flex justify-content-between align-items-start mb-3">
+              <div class="lang-indicator">
+                <span class="lang-dot lang-php"></span> PHP
+              </div>
+              <a href="https://github.com/spidervirus/SheetGate" target="_blank" rel="noopener noreferrer" class="text-secondary hover-text-white">
+                <i class="bi bi-box-arrow-up-right fs-5"></i>
+              </a>
+            </div>
+            <h4 class="fw-bold text-white mb-2">SheetGate</h4>
+            <p class="text-secondary small mb-3 flex-grow-1">
+              Turns any Google Sheet into a fast, cached, read-only JSON REST API and Model Context Protocol (MCP) server for autonomous AI coding agents.
+            </p>
+            <div class="d-flex flex-wrap gap-1 mb-4">
+              <span class="project-tag">PHP</span>
+              <span class="project-tag">MCP Server</span>
+              <span class="project-tag">REST API</span>
+              <span class="project-tag">Google Sheets</span>
+            </div>
+            <a href="https://github.com/spidervirus/SheetGate" target="_blank" rel="noopener noreferrer" class="btn btn-outline-glass btn-sm w-100">
+              <i class="bi bi-github me-1"></i> View Repository
+            </a>
+          </div>
+        </div>
+
+        <!-- 6. Statsy -->
+        <div class="col-md-6 col-lg-4 project-col" data-category="tools">
+          <div class="glass-card project-card">
+            <div class="d-flex justify-content-between align-items-start mb-3">
+              <div class="lang-indicator">
+                <span class="lang-dot lang-ts"></span> TypeScript
+              </div>
+              <a href="https://github.com/spidervirus/Statsy" target="_blank" rel="noopener noreferrer" class="text-secondary hover-text-white">
+                <i class="bi bi-box-arrow-up-right fs-5"></i>
+              </a>
+            </div>
+            <h4 class="fw-bold text-white mb-2">Statsy</h4>
+            <p class="text-secondary small mb-3 flex-grow-1">
+              Clean, beautiful, self-hosted status pages that deploy in under 60 seconds with zero cloud vendor lock-in. Real-time uptime monitoring for your services.
+            </p>
+            <div class="d-flex flex-wrap gap-1 mb-4">
+              <span class="project-tag">TypeScript</span>
+              <span class="project-tag">Uptime</span>
+              <span class="project-tag">DevOps</span>
+              <span class="project-tag">Status Page</span>
+            </div>
+            <a href="https://github.com/spidervirus/Statsy" target="_blank" rel="noopener noreferrer" class="btn btn-outline-glass btn-sm w-100">
+              <i class="bi bi-github me-1"></i> View Repository
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Skills -->
+  <section id="skills" class="py-5">
+    <div class="container">
+      <h2 class="fw-bold text-white mb-1">Technical Expertise</h2>
+      <p class="text-secondary mb-4">The core languages, frameworks, and architecture tools I work with daily.</p>
+
+      <div class="row g-4">
+        <!-- AI & Agents -->
+        <div class="col-md-6 col-lg-3">
+          <div class="glass-card p-4 h-100">
+            <div class="skill-category-title">
+              <i class="bi bi-cpu text-emerald me-2"></i> AI & Agents
+            </div>
+            <div class="d-flex flex-column gap-2">
+              <div class="skill-pill"><i class="bi bi-robot"></i> LLM Tooling</div>
+              <div class="skill-pill"><i class="bi bi-plug"></i> Model Context Protocol</div>
+              <div class="skill-pill"><i class="bi bi-diagram-3"></i> Agentic Workflows</div>
+              <div class="skill-pill"><i class="bi bi-search"></i> Source Verification</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Systems & Languages -->
+        <div class="col-md-6 col-lg-3">
+          <div class="glass-card p-4 h-100">
+            <div class="skill-category-title">
+              <i class="bi bi-terminal text-emerald me-2"></i> Core Languages
+            </div>
+            <div class="d-flex flex-column gap-2">
+              <div class="skill-pill"><i class="bi bi-gear"></i> Rust</div>
+              <div class="skill-pill"><i class="bi bi-filetype-py"></i> Python</div>
+              <div class="skill-pill"><i class="bi bi-filetype-tsx"></i> TypeScript / JS</div>
+              <div class="skill-pill"><i class="bi bi-filetype-php"></i> PHP & Dart</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Frontend & Mobile -->
+        <div class="col-md-6 col-lg-3">
+          <div class="glass-card p-4 h-100">
+            <div class="skill-category-title">
+              <i class="bi bi-phone text-emerald me-2"></i> Web & Mobile
+            </div>
+            <div class="d-flex flex-column gap-2">
+              <div class="skill-pill"><i class="bi bi-browser-chrome"></i> React & Next.js</div>
+              <div class="skill-pill"><i class="bi bi-phone"></i> Flutter & Expo</div>
+              <div class="skill-pill"><i class="bi bi-bootstrap"></i> Bootstrap 5 & Tailwind</div>
+              <div class="skill-pill"><i class="bi bi-code-slash"></i> Responsive HTML5</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Backend & Infrastructure -->
+        <div class="col-md-6 col-lg-3">
+          <div class="glass-card p-4 h-100">
+            <div class="skill-category-title">
+              <i class="bi bi-server text-emerald me-2"></i> Cloud & Infra
+            </div>
+            <div class="d-flex flex-column gap-2">
+              <div class="skill-pill"><i class="bi bi-box"></i> Docker & Compose</div>
+              <div class="skill-pill"><i class="bi bi-shield-check"></i> Caddy & Reverse Proxies</div>
+              <div class="skill-pill"><i class="bi bi-database"></i> Supabase & Firebase</div>
+              <div class="skill-pill"><i class="bi bi-broadcast"></i> WebSockets & REST</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-5">
+    <div class="container">
+      <div class="glass-card p-4 p-md-5">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-8">
+            <h2 class="fw-bold text-white mb-3">About Aman Mohamed Ali</h2>
+            <p class="text-secondary leading-relaxed mb-3">
+              I am a software engineer based in <strong>Dubai, UAE</strong>. With a background spanning both frontend user experience and low-level backend architecture, I focus on building tools that give developers superpowers.
+            </p>
+            <p class="text-secondary leading-relaxed mb-3">
+              My recent engineering focus is centered on <strong>AI agents, agentic software engineering</strong>, and systems utilities like <strong>Tunly</strong> (a Rust-powered ngrok replacement) and <strong>styleprobe</strong> (design token extraction for agents).
+            </p>
+            <p class="text-secondary leading-relaxed mb-0">
+              When I'm not writing code, I actively explore open-source codebases, participate in security experiments, and collaborate with teams building the next generation of software tools.
+            </p>
+          </div>
+          <div class="col-lg-4 text-center">
+            <div class="d-flex flex-column gap-2">
+              <a href="https://github.com/spidervirus" target="_blank" rel="noopener noreferrer" class="btn btn-outline-glass text-start py-3 px-4">
+                <i class="bi bi-github fs-5 me-2 text-emerald"></i> <strong>GitHub:</strong> @spidervirus
+              </a>
+              <a href="https://www.linkedin.com/in/amanmohd/" target="_blank" rel="noopener noreferrer" class="btn btn-outline-glass text-start py-3 px-4">
+                <i class="bi bi-linkedin fs-5 me-2 text-emerald"></i> <strong>LinkedIn:</strong> amanmohd
+              </a>
+              <div class="btn btn-outline-glass text-start py-3 px-4">
+                <i class="bi bi-geo-alt fs-5 me-2 text-emerald"></i> <strong>Location:</strong> Dubai, UAE
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact CTA -->
+  <section id="contact" class="py-5">
+    <div class="container text-center">
+      <div class="glass-card p-5 mx-auto" style="max-width: 720px;">
+        <h2 class="fw-bold text-white mb-2">Let's Build Something Meaningful</h2>
+        <p class="text-secondary mb-4">
+          Whether you have a question, want to collaborate on an open-source project, or are looking for full-stack & AI engineering talent, feel free to reach out.
+        </p>
+
+        <div class="d-flex flex-wrap justify-content-center gap-3">
+          <button id="copyEmailBtn" class="btn btn-emerald" data-email="69119173+spidervirus@users.noreply.github.com">
+            <i class="bi bi-envelope-fill me-2"></i> Copy Email
+          </button>
+          <a href="https://www.linkedin.com/in/amanmohd/" target="_blank" rel="noopener noreferrer" class="btn btn-outline-glass">
+            <i class="bi bi-linkedin me-2"></i> Message on LinkedIn
+          </a>
+          <a href="https://github.com/spidervirus" target="_blank" rel="noopener noreferrer" class="btn btn-outline-glass">
+            <i class="bi bi-github me-2"></i> View GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+      <div>
+        © 2026 Aman Mohamed Ali. Crafted with HTML5 & Bootstrap 5.3.
+      </div>
+      <div class="d-flex gap-3">
+        <a href="https://github.com/spidervirus" target="_blank" rel="noopener noreferrer" class="text-secondary text-decoration-none hover-text-white">
+          <i class="bi bi-github fs-5"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/amanmohd/" target="_blank" rel="noopener noreferrer" class="text-secondary text-decoration-none hover-text-white">
+          <i class="bi bi-linkedin fs-5"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Copy Toast Notification -->
+  <div id="copyToast" class="copy-toast">
+    <i class="bi bi-check2-circle me-1"></i> Email address copied to clipboard!
+  </div>
+
+  <!-- Bootstrap 5.3 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+  <!-- Custom JS -->
+  <script src="js/main.js"></script>
+</body>
+</html>
